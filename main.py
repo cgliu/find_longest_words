@@ -1,5 +1,5 @@
 """
-Find the longest English word that can be typed with the first line 
+Find the longest English word that can be typed with the first line
 of a standard keyboard.
 """
 
@@ -15,7 +15,8 @@ def find_sorted_longest_words(filename):
                 all_in_must_have &= c in must_have
             if all_in_must_have:
                 candidates.append(line)
-    return candidates.sort(reverse=True, key=len)
+    candidates.sort(reverse=True, key=len)
+    return candidates
 
 
 if __name__ == "__main__":
